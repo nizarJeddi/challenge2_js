@@ -1,0 +1,129 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>site</title>
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-GLhlTQ8iRABdZLl6O3oVMWSktQOp6b7In1Zl3/Jr59b6EGGoI1aFkw7cmDA6j6gD" crossorigin="anonymous">
+  <link
+  rel="stylesheet"
+  href="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/5.1.0/css/bootstrap.min.css"
+/>
+<link
+  rel="stylesheet"
+  href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css"
+/>
+</head>
+<body>
+  <div class="container-fluid">
+  <h2 id="titre_site" style="text-align: center;color: rebeccapurple;font-size: 60px;"></h2>
+  <h1 id="titre_inscri" style="text-align: center;color: rebeccapurple;font-size: 60px;" data-toggle="tooltip" title="titre"  >Bienvenue sur notre site </h1>
+</div>
+
+
+<!-- code html de notre formulaire d'ajout des livres  -->
+
+<div class="container mt-5">
+  <div class="row">
+      <div class="col-lg-12">
+          <h1 class="alert alert-primary text-center">
+            Application bibliothèque
+          </h1>
+      </div>
+      <div class="col-lg-4">
+          <div class="card">
+              <div class="card-body">
+                  <form id="form">
+                     
+                      <label for="input_titre" class="fw-bold text-secondary">Titre:</label>
+                      <input type="text" placeholder="taper le titre de livre" class="form-control" id="input_titre" required="required">
+                      <div id="text_titre" class="form-text text-danger"></div>
+                      <br>
+                      <label for="input_autheur"class="fw-bold text-secondary">Autheur:</label>
+                      <input type="text" placeholder="taper le nom de l'autheur" class="form-control" id="input_autheur" required="required">
+                      <div id="text_autheur" class="form-text text-danger"></div>
+                      <br>
+                      <label for="input_année" class="fw-bold text-secondary">Année:</label>
+                      <input type="number" placeholder="taper l'année d'édition de livre" class="form-control" id="input_année" required="required"  max="2023"min="1990">
+                      <div id="text_année" class="form-text text-danger"></div>
+                      <br>
+                      <label class="form-check-label fw-bold text-secondary" for="form-check" >
+                        Cocher le genre de livre :
+                      </label>
+                      <br>
+                      <div class="form-check" id="form-check">
+                        <input class="form-check-input" type="radio" name="input_scientifique" id="input_scientifique"required="required">
+                        <label class="form-check-label" for="input_scientifique">
+                          Scientifique
+                        </label>
+                      </div>
+                      <div class="form-check" id="form-check">
+                        <input class="form-check-input" type="radio" name="input_scientifique" id="input_littéraire" required="required">
+                        <label class="form-check-label" for="input_littéraire">
+                          Littéraire
+                        </label>
+                        <div id="text_check" class="form-text text-danger"></div>
+                      </div>
+                      <br>
+                      <div class="text-center">
+                      <input id="btn_save" value="save" class="btn btn-primary" type="submit" data-toggle="tooltip" title="enregistrement de livre dans la base des données">
+                      <input id="btn_reset" value="reset" class="btn  btn-danger ms-2" type="reset"data-toggle="tooltip" title="vider le champs du formulaire">
+                    </div>
+                    <div id="text_controle" class="mt-3 form-text text-warning bg-danger fw-bold fs-6"></div>
+                  </form>
+              </div>
+          </div>
+      </div>
+  
+<!-- fin du code html de notre formulaire  -->
+  
+
+
+<div class="col-lg-8">
+  <div class="card">
+      <div class="card-body">
+        <h2 style="color: goldenrod;"> Livres scientifiques <span id="compteur"></span></h2>
+          <div class="table-responsive mt-3">
+              <table id="table_scientifique" class="table table-striped">
+                  <thead>
+                      <tr>
+                          <th class="text-muted">No</th>
+                          <th class="text-muted">Titre</th>
+                          <th class="text-muted">Autheur</th>
+                          <th class="text-muted">Année</th>
+                          <th class="text-warning">Scientifique</th>       
+                          <th class="text-success">Modifier</th>
+                          <th class="text-danger">Supprimer</th>
+                      </tr>
+                  </thead>
+                  <tbody id="body_scientifique">
+
+                  </tbody>
+              </table>
+          </div><hr>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+  
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/js/bootstrap.bundle.min.js" integrity="sha384-w76AqPfDkMBDXo30jS1Sgez6pr3x5MlQ1ZAGC+nuZB+EYdgRZgiwxhTBTkF7CXvN" crossorigin="anonymous"></script>  
+ 
+  <script src="site.js"></script>
+</body>
+</html>
